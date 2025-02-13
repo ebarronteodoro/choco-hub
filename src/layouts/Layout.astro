@@ -1,22 +1,36 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import './src/styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>ChocolatePro • Creador de Contenido</title>
+		<ClientRouter />
 	</head>
-	<body>
+	<body class="bg-black text-white">
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
+	* {
+		box-sizing: border-box;
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		list-style: none;
+		text-decoration: none;
+	}
+
+	body {
+		color-scheme: light dark;
 	}
 </style>

@@ -1,0 +1,25 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const { id } = Astro.params;
+
+// URL del video en YouTube
+const embedUrl = `https://www.youtube.com/embed/${id}`;
+---
+
+<Layout>
+  <Header />
+  <div class="w-full max-w-4xl mx-auto">
+    <iframe
+      class="w-full h-[315px] md:h-[500px] rounded-lg shadow-lg"
+      src={embedUrl}
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <a href="/" class="mt-4 inline-block text-blue-500 hover:underline">
+    ⬅ Volver a la lista de videos
+  </a>
+</Layout>
